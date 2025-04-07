@@ -12,7 +12,7 @@
   --second-color-alt: #FF7A32; /* Darker orange for hover effects */
   --title-color: #FFFFFF; /* White for titles and main text */
   --text-color: #D9D9D9; /* Light grayish white for general text */
-  --body-color: #FFFFFF; /* Light beige for background */
+  --body-color: black; /* Light beige for background */
 
   /*========== Font and typography ==========*/
   --body-font: "Montserrat", sans-serif;
@@ -68,6 +68,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  border-radius: 10px;
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
@@ -1203,129 +1204,6 @@ z-index: 5;
 }
 
 
-/* Projectsssss */
-/* CSS */
-.tabs-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Tab Navigation */
-.tab-nav {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 30px;
-    border-bottom: 2px solid #e2e4e6;
-}
-
-.tab-button {
-    padding: 15px 30px;
-    font-size: 18px;
-    font-weight: 600;
-    background: none;
-    border: none;
-    border-bottom: 4px solid transparent;
-    cursor: pointer;
-    color: #000;
-    transition: all 0.3s ease;
-}
-
-.tab-button:hover {
-    color: #ffd700;
-}
-
-.tab-button.active {
-    border-bottom-color: #ffd700;
-}
-
-/* Content Panels */
-.content-panel {
-    display: none;
-    padding: 40px 0; /* Added top and bottom padding */
-}
-
-.content-panel.active {
-    display: block;
-}
-
-.content-wrapper {
-    display: flex;
-    gap: 40px;
-    align-items: center; /* Changed from flex-start to center */
-}
-
-/* Text Content */
-.text-content {
-    flex: 1;
-    max-width: 50%;
-}
-
-h2 {
-    color: #000;
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 30px; /* Increased spacing */
-    position: relative;
-}
-
-h2:not(.wheretofind):not(.mapsite):not(.socialcontact)::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  width: 60px;
-  height: 3px;
-  background-color: #ffd700;
-}
-
-.description {
-    font-style: italic;
-    color: #000;
-    margin-bottom: 30px; /* Increased spacing */
-    line-height: 1.6;
-}
-
-/* Image Content */
-.image-content {
-    flex: 1;
-    max-width: 50%;
-    display: flex;
-    align-items: center; /* Centers image vertically */
-    justify-content: center; /* Centers image horizontally */
-}
-
-.image-content img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin: auto; /* Ensures image is centered */
-}
-
-/* Add this new rule for the RCS image */
-#RCS .image-content img {
-    max-width: 70%; /* Adjust this value to make the image smaller */
-    margin: 0 auto; /* Center the image */
-    display: block;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .content-wrapper {
-        flex-direction: column;
-    }
-    
-    .text-content,
-    .image-content {
-        max-width: 100%;
-    }
-
-    /* Adjust the RCS image size for mobile devices if needed */
-    #RCS .image-content img {
-        max-width: 100%;
-    }
-}
 
 /* Base styles for home title */
 .home__title {
@@ -1368,4 +1246,111 @@ h2:not(.wheretofind):not(.mapsite):not(.socialcontact)::after {
     margin-bottom: 3rem;
     margin-top: -2rem;  /* This pulls the description up closer to the title */
   }
+}
+
+/* Timeline section */
+.time-line {
+  width: 1000px;
+  margin: 100px auto;
+  position: relative;
+}
+.time-line::after{
+  content: "";
+  position: absolute;
+  right: 50%;
+  top: 0;
+  height:100%;
+  width: 5px;
+  background:linear-gradient(#2596be, #ffd700);
+  border-radius: 50px;
+  animation: LineAnimated 5s linear forwards;
+  z-index: -1;
+}
+@keyframes LineAnimated{
+  0%{
+    height:0;
+  }
+  100%{
+    height:100%;
+  }
+}
+.time-line-container {
+  width: 50%;
+  position: relative;
+  padding: 10px 20px;
+  animation: Animate-Container 1s linear forwards;
+  opacity: 0;
+  animation-delay: var(--dly);
+}
+@keyframes Animate-Container{
+  0%{
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100%{
+    opacity:1;
+    transform: translateY(0px);
+  }
+}
+.time-line-container:nth-child(even){
+  right:-50%;
+}
+
+.time-line-container:nth-child(odd)::before{
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background:linear-gradient(#2596be, #ffd700);
+  top: 0;
+  right: -7.5px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.time-line-container:nth-child(even)::before{
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background:linear-gradient(#2596be, #ffd700);
+  top: 0;
+  left: -12.5px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+/* Text Content */
+.text-content {
+  padding: 20px 30px;
+  background: dimgrey;
+  border-radius: 10px;
+}
+
+.text-content h2 {
+    color: #FFFFFF;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px; /* Increased spacing */
+    position: relative;
+}
+
+h2:not(.wheretofind):not(.mapsite):not(.socialcontact)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 60px;
+  height: 3px;
+  background-color: #ffd700;
+}
+
+.text-content p{
+  font-size: 14px;
+  color: #FFFFFF;
+  margin-top: 10px;
+}
+.image-content {
+  padding: 10px 15px;
+  border-radius: 10px;
 }
