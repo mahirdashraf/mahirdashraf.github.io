@@ -651,26 +651,6 @@ img {
   }
 }
 
-/* Contact Section */
-/* .contact {
-  background-color: black;
-}
-.contact__description {
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.contact__info p {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-
-.contact__socials {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}*/
-
 .contact__icons {
   color: var(--text-color);
   font-size: 1.5rem;
@@ -766,34 +746,6 @@ img {
   }
 }
 
-/*=============== ABOUT SECTION ===============*/
-/* .about {
-  padding: 7rem 0;
-  background-color: var(--body-color);
-  color: var(--text-color);
-}
-
-.about__container {
-  display: grid;
-  row-gap: 3rem;
-}
-
-.about__content {
-  text-align: center;
-}
-
-.about__subtitle {
-  font-size: var(--small-font-size);
-  margin-bottom: .5rem;
-  letter-spacing: 1px;
-  color: var(--second-color);
-}
-
-.about__title {
-  font-size: var(--biggest-font-size);
-  color: var(--title-color);
-}
-*/
 .about__description {
   line-height: 150%;
   margin-bottom: 1.5rem;
@@ -1371,16 +1323,6 @@ img {
     padding: 2rem 0;
 }
 
-/* .ourmission::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(82, 77, 77, 0.5);  
-    z-index: 1;
-} */
 
 
 

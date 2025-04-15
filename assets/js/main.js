@@ -148,6 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initialize tabs
   initTabs();
 
+
   // Other existing JavaScript code...
   // (Keep your existing code for other functionalities here)
 });
