@@ -1124,7 +1124,7 @@ img {
 .sponsor__list {
   display: flex; /* Flexbox layout */
   justify-content: center; /* Center items horizontally */
-  gap: 2rem; /* Space between sponsor blocks */
+  gap: 6rem; /* Space between sponsor blocks */
   flex-wrap: wrap; /* Wrap items on smaller screens */
 }
 
@@ -1140,6 +1140,7 @@ img {
   align-items: center;
   justify-content: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: scale(1.4); /* Scale up for prominence */
 }
 
 .sponsor__block1:hover {
